@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="overview">
+        <h1 class="title"><b>Grocery Bud</b></h1>
+        <form id="new">
+            <input type="text" class="textbox" id="idtextbox" onkeyup="fil()" placeholder="enter the product"><input type="button" value="Submit" class="btnsub" onclick="addfun()" id="idbtnsub"></input>
+        </form>
+        <div class="tolist" id="idtolist">
+            <ul id="dplist"></ul>
+        </div>
+        <div id="clrlist">
+            <button class="btnclr" id="idbtnclr" onclick="clrfun()">C&nbsp;l&nbsp;e&nbsp;a&nbsp;r&nbsp;&nbsp;I&nbsp;t&nbsp;e&nbsp;m&nbsp;s</button>
+        </div>
+        <script src="./index.js"></script>
+        <script src="https://kit.fontawesome.com/f411cc5e95.js" crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
