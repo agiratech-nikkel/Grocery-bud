@@ -11,8 +11,6 @@ function addfun() {
         info.push(task.value);
         var clit = document.getElementById("idbtnclr");
         clit.style.display = "block"
-            // bud.style.display = "none";
-            // bue.style.display = "none";
         task.value = ""
         dis();
     }
@@ -21,7 +19,7 @@ function addfun() {
 function dis() {
     dplist.innerHTML = ""
     info.forEach((info, i) => {
-        dplist.innerHTML += `<li class="tasktext" id="idtasktext"><a class="listin">${info}<a><button id="ediid" class="edit" onclick="edit(${i})"><i id='edit' class='fa-solid fa-pen-to-square'></i></button><button  id="delid" onclick="del(${i})" class="delete"><i id='delet' class="fa-solid fa-trash-can" type'></i></button></li>`
+        dplist.innerHTML += `<li class="tasktext" id="idtasktext"><a class="listin">${info}<a><button id="${i}ediid" class="edit" onclick="edit(${i})"><i id='edit' class='fa-solid fa-pen-to-square'></i></button><button  id="delid" onclick="del(${i})" class="delete"><i id='delet' class="fa-solid fa-trash-can" type'></i></button></li>`
     })
 }
 
@@ -36,12 +34,27 @@ function del(i) {
     info.splice(i, 1);
     dis();
 }
+var st = document.getElementById("str")
+var sub = document.getElementById("idbtnsub");
+var su = document.getElementById("idedisub");
+var taskad = document.getElementById("idtextbox");
 
 function edit(i) {
-    let taska = document.getElementById("idtextbox");
-    taska.value = info[i]
-    info.splice(i, 1);
+    st.value = i
+    taskad.value = info[i]
+    su.style.display = "block";
+    sub.style.display = "none"
 }
+
+var le = document.getElementById("idedisub");
+le.addEventListener("click", function() {
+    let ig = st.value
+    info[ig] = taskad.value
+    su.style.display = "none";
+    sub.style.display = "block";
+    taskad.value = ""
+    dis();
+})
 
 function fil() {
     let input = document.getElementById("idtextbox");

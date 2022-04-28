@@ -8,14 +8,16 @@
     <div class="overview">
         <h1 class="title"><b>Grocery Bud</b></h1>
         <form id="new">
-            <input type="text" class="textbox" id="idtextbox" onkeyup="fil()" placeholder="enter the product"><input type="button" value="Submit" class="btnsub" onclick="addfun()" id="idbtnsub"></input>
+            <input type="text" class="textbox" id="idtextbox" onkeyup="fil()" placeholder="Enter the product to Buy"><input type="button" value="Submit" class="btnsub" onclick="addfun()" id="idbtnsub"></input>
         </form>
+        <input type="submit" value="Submit" class="edisub" id="idedisub">
         <div class="tolist" id="idtolist">
             <ul id="dplist"></ul>
         </div>
         <div id="clrlist">
             <button class="btnclr" id="idbtnclr" onclick="clrfun()">C&nbsp;l&nbsp;e&nbsp;a&nbsp;r&nbsp;&nbsp;I&nbsp;t&nbsp;e&nbsp;m&nbsp;s</button>
         </div>
+        <input type="hidden" id="str">
         <script src="./index.js"></script>
         <script src="https://kit.fontawesome.com/f411cc5e95.js" crossorigin="anonymous"></script>
     </div>
